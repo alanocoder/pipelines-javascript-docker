@@ -3,12 +3,10 @@
 FROM node:12.18.1
 ENV NODE_ENV=production
 
-WORKDIR /app
+RUN apt-get -y install python3-pip
+RUN pip3 install ansible
 
-RUN python3 --version
-RUN uname -a
-RUN ls /
-RUN python3 -m pip install ansible
+WORKDIR /app
 
 COPY ["package.json", "package-lock.json*", "./"]
 
