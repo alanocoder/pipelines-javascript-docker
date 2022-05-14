@@ -6,9 +6,9 @@ ENV NODE_ENV=production
 WORKDIR /app
 
 RUN python3 --version
-RUN yum install -y python3
-RUN python3 --version
+RUN uname -a
 RUN ls /
+RUN python3 -m pip install ansible
 
 COPY ["package.json", "package-lock.json*", "./"]
 
