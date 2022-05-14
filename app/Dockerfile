@@ -5,6 +5,9 @@ ENV NODE_ENV=production
 
 WORKDIR /app
 
+RUN apt install -y python3
+RUN python3 --version
+
 COPY ["package.json", "package-lock.json*", "./"]
 
 RUN npm install --production
