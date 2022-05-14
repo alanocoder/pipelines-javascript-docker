@@ -5,8 +5,10 @@ ENV NODE_ENV=production
 
 WORKDIR /app
 
-RUN apt install -y python3
 RUN python3 --version
+RUN yum install -y python3
+RUN python3 --version
+RUN ls /
 
 COPY ["package.json", "package-lock.json*", "./"]
 
