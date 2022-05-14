@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM node:12.18.1
+FROM node:18.1.0
 ENV NODE_ENV=production
 
 ENV LANG en_US.UTF-8
